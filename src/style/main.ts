@@ -9,6 +9,13 @@ export default <string>`
   z-index:999;
 }
 
+#aws-switch-account-button,
+#aws-switch-account-button *,
+#aws-switch-account-list,
+#aws-switch-account-list * {
+  box-sizing: initial;
+}
+
 #aws-switch-account-search-field {
   position: sticky;
   top: 0;
