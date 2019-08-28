@@ -8,7 +8,7 @@ First you need to install Tampermonkey or Greasemonkey in your prefered browser.
 
 If you encounter an issue with any other version please open an issue here regarding that.
 
-After you have installed your prefered userscript plugin, either download the pre-compiled script from the [releases](/releases/latest) page or by cloning this repository and running
+After you have installed your prefered userscript plugin, either download the pre-compiled script from the [releases](https://github.com/enfogroup/tm-aws-account-switcher/releases/latest) page or by cloning this repository and running
 
 ```
 npm install && npm run-script build
