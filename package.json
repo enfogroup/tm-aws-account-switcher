@@ -1,0 +1,29 @@
+{
+  "name": "account-switch",
+  "version": "0.1.0",
+  "description": "GM/TM Script that allows you to easily jump accross a arbitrary list of AWS accounts.",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --display-error-details --progress --colors",
+    "start": "webpack --display-error-details --progress --colors --watch"
+  },
+  "keywords": [
+    "tampermonkey",
+    "greasemonkey",
+    "aws"
+  ],
+  "author": "Alexander Karlsson <alexander.karlsson@enfogroup.com>",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^1.30.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
