@@ -13,7 +13,7 @@ export default async function main() {
       const tmp = await cache.remember('accounts', async () => {
         const resp = await http.get<Account[]>(
           `${tampermonkey.apiURL}?id=${base64.encodeURLSafe(USERNAME)}`, // highly skeptical of using this as the id, rethink in future.
-          { apiKey: tampermonkey.apiKey },
+          { 'x-api-key': tampermonkey.apiKey },
         )
 
         if (resp.status !== 200) {
