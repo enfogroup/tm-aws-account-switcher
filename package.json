@@ -1,6 +1,6 @@
 {
   "name": "account-switch",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "GM/TM Script that allows you to easily jump accross a arbitrary list of AWS accounts.",
   "main": "./src/index.ts",
   "scripts": {
