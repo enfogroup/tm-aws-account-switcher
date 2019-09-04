@@ -134,9 +134,7 @@ export class Switcher {
     url: string,
   ): HTMLDivElement | null {
     const btn = document.createElement('div')
-    btn.innerHTML = `<span class="role">${this.accountRoleToLabel(
-      account.Role,
-    )}</span>
+    btn.innerHTML = `
       <form action="https://signin.aws.amazon.com/switchrole" method="POST" target="_top">
         <input type="hidden" name="action" value="switchFromBasis">
         <input type="hidden" name="src" value="nav">
@@ -146,7 +144,11 @@ export class Switcher {
         <input type="hidden" name="color" value="146eb4">
         <input type="hidden" name="csrf" value="${this.csrf}">
         <input type="hidden" name="redirect_uri" value="${url}">
-        <input type="submit" name="displayName" value="${account.Name}">
+        <input type="hidden" name="displayName" value="${account.Name}">
+        <button type="submit" class="list-button">
+          <span class="role">${this.accountRoleToLabel(account.Role)}</span>
+          ${account.Name}
+        </button>
       </form>`
     this.index[`${account.Id}_${account.Role}`] = btn
 
@@ -163,13 +165,16 @@ export class Switcher {
 
     const btn = document.createElement('div')
     btn.style.backgroundColor = '#999999'
-    btn.innerHTML = `<span class="back-icon"><span style="margin-left: -1px;">&#x25c0;</span></span>
+    btn.innerHTML = `
       <form action="https://signin.aws.amazon.com/switchrole" method="POST" target="_top">
         <input type="hidden" name="action" value="switchToBasis">
         <input type="hidden" name="src" value="nav">
         <input type="hidden" name="csrf" value="${csrfField.value}">
         <input type="hidden" name="redirect_uri" value="${url}">
-        <input type="submit" value="Back to main">
+        <button type="submit" class="list-button">
+          <span class="back-icon"><span style="margin-left: -1px;">&#x25c0;</span></span>
+          <span>Back to main</span>
+        </button>
       </form>`
 
     return btn

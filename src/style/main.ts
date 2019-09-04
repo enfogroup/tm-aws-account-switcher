@@ -55,6 +55,10 @@ export default <string>`
   justify-content: center;
 }
 
+#aws-switch-account-button > span {
+  margin-top: -3px;
+}
+
 #aws-switch-account-button:hover {
   cursor: pointer;
   text-decoration: none;
@@ -83,8 +87,7 @@ export default <string>`
 
 #aws-switch-account-list div {
   position: relative;
-  height: 20px;
-  padding: 10px;
+  padding: 0;
   margin: 0;
   background: rgba(20,110,180, 0.7);
   font-size: 16px;
@@ -105,19 +108,27 @@ export default <string>`
 }
 
 #aws-switch-account-list div form {
+  width: 100%;
   margin: 0;
 }
 
 #aws-switch-account-list .back-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  background: #e1e8f0;
+  background: #bababa;
   border-radius: 20px;
   font-size: 12px;
   line-height: 1.236;
+}
+
+#aws-switch-account-list .back-icon ~ * {
+  margin-left: 30px;
 }
 
 #aws-switch-account-list .role {
@@ -135,17 +146,19 @@ export default <string>`
   text-transform: uppercase;
 }
 
-#aws-switch-account-list div input[type=submit] {
+#aws-switch-account-list .list-button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 16px;
   color: #fff;
-  width: 200px;
   background: transparent;
   text-align: left;
   font-size: 14px;
   font-family: Helvetica Neue,Roboto,Arial,Droid Sans,sans-serif;
-  line-height: 1.207;
+  line-height: 1.143;
   border: none;
   cursor: pointer;
-  height: 40px;
 }
 
 #aws-switch-account-list.open {
