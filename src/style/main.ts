@@ -1,6 +1,6 @@
 export default <string>`
 #aws-switch-account-button, #aws-switch-account-list {
-  font-family: Helvetica Neue,Roboto,Arial,Droid Sans,sans-serif;
+  font-family: "Amazon Ember","HelveticaNeue","Helvetica Neue","Amazon Ember",Roboto,"Roboto-Regular","Amazon Ember",Helvetica,Arial,sans-serif;
   padding: 10px;
   background-color: #ff9900;
   color: #ffffff;
@@ -155,7 +155,6 @@ export default <string>`
   background: transparent;
   text-align: left;
   font-size: 14px;
-  font-family: Helvetica Neue,Roboto,Arial,Droid Sans,sans-serif;
   line-height: 1.143;
   border: none;
   cursor: pointer;
