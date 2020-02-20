@@ -2,6 +2,10 @@
   "name": "account-switch",
   "version": "0.2.0",
   "description": "GM/TM Script that allows you to easily jump accross a arbitrary list of AWS accounts.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enfogroup/tm-aws-account-switcher"
+  },
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
