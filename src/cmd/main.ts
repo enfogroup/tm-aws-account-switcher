@@ -2,7 +2,6 @@ import { CSRF, USERNAME } from '../constants'
 import { Switcher } from '../gui/switcher'
 import { Account } from '../types'
 import * as cache from '../util/cache'
-import * as base64 from '../util/base64'
 import * as http from '../util/request'
 
 export default async function main() {
@@ -11,10 +10,9 @@ export default async function main() {
 
     if (!!tampermonkey.apiKey) {
       const tmp = await cache.remember('accounts', async () => {
-        const resp = await http.get<Account[]>(
-          `${tampermonkey.apiURL}?id=${base64.encodeURLSafe(USERNAME)}`, // highly skeptical of using this as the id, rethink in future.
-          { 'x-api-key': tampermonkey.apiKey },
-        )
+        const resp = await http.get<Account[]>(tampermonkey.apiURL, {
+          Authorization: tampermonkey.apiKey,
+        })
 
         if (resp.status !== 200) {
           throw new Error(`failed to load accounts: ${resp.statusText}`)
