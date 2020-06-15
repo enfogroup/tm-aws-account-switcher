@@ -67,8 +67,6 @@ export default <string>`
 
 #aws-switch-account-button.open {
   transform: rotate(0deg) scale(0.8);
-  bottom: calc(50% + 10px);
-
 }
 
 #aws-switch-account-button.open:hover {
