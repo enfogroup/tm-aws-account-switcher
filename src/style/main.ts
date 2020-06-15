@@ -44,19 +44,19 @@ export default <string>`
   bottom: 10px;
   height: 30px;
   width: 30px;
-  border-radius: 50px;
+  border-radius: 25px;
   padding: 10px;
   font-size: 23px;
   transform: scale(0.8) rotate(135deg);
   box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
-  opacity: 0.9;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 #aws-switch-account-button > span {
-  margin-top: -3px;
+  margin-top: -1px;
 }
 
 #aws-switch-account-button:hover {
@@ -66,7 +66,9 @@ export default <string>`
 }
 
 #aws-switch-account-button.open {
-  transform: rotate(0deg);
+  transform: rotate(0deg) scale(0.8);
+  bottom: calc(50% + 10px);
+
 }
 
 #aws-switch-account-button.open:hover {
@@ -75,12 +77,12 @@ export default <string>`
 
 #aws-switch-account-list {
   background-color: #fff;
-  left: 30px;
-  bottom: 30px;
+  left: 35px;
+  bottom: 35px;
   opacity: 0;
   height: 0;
   width: 0;
-  box-shadow: 0px 0px 3px 0px rgba(20,110,180,.4);
+  box-shadow: 3px 4px 9px 2px rgba(20,110,180,.4);
   overflow-y: auto;
   padding: 0px;
 }
@@ -99,7 +101,7 @@ export default <string>`
 }
 
 #aws-switch-account-list div:not(:last-child) {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 #aws-switch-account-list div:hover {
@@ -143,6 +145,7 @@ export default <string>`
   font-size: 8px;
   font-weight: bold;
   line-height: 1.279;
+  border-radius: 4px;
   text-transform: uppercase;
 }
 
@@ -162,8 +165,10 @@ export default <string>`
 
 #aws-switch-account-list.open {
   opacity: 1;
-  height: 70%;
+  max-height: 60%;
   width: 320px;
   max-width: 100%;
+  height: auto;
+  min-height: 20%;
 }
 `
