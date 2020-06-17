@@ -115,13 +115,13 @@ export default <string>`
 #aws-switch-account-list .back-icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  background: #bababa;
+
   border-radius: 20px;
   font-size: 12px;
   line-height: 1.236;

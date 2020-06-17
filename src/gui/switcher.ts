@@ -174,8 +174,8 @@ export class Switcher {
         <input type="hidden" name="csrf" value="${csrfField.value}">
         <input type="hidden" name="redirect_uri" value="${url}">
         <button type="submit" class="list-button">
-          <span class="back-icon"><span style="margin-left: -1px;">&#x25c0;</span></span>
-          <span>Back to main</span>
+          <span class="back-icon"><span style="margin-left: -1px;">&#x23CE;</span></span>
+          <span>Back to Enfo Auth</span>
         </button>
       </form>`
 
