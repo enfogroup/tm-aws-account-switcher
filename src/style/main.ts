@@ -147,11 +147,16 @@ export default <string>`
   text-transform: uppercase;
 }
 
-#aws-switch-account-list .list-button {
+#aws-switch-account-list .list-div {
+  box-sizing: border-box;
+  border: none;
+  }
+
+  #aws-switch-account-list .list-button {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 12px 16px;
+  padding: 12px 16px 12px 8px;
   color: #fff;
   background: transparent;
   text-align: left;
@@ -160,6 +165,15 @@ export default <string>`
   border: none;
   cursor: pointer;
 }
+
+.list-copy-button {
+  width: auto;
+  background: transparent;
+  border: none;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  }
 
 #aws-switch-account-list.open {
   opacity: 1;
