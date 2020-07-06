@@ -37,7 +37,6 @@ export class Switcher {
       ) {
         return event
       }
-
       this.hide()
     })
   }
@@ -145,10 +144,13 @@ export class Switcher {
         <input type="hidden" name="csrf" value="${this.csrf}">
         <input type="hidden" name="redirect_uri" value="${url}">
         <input type="hidden" name="displayName" value="${account.Name}">
-        <button type="submit" class="list-button">
-          <span class="role">${this.accountRoleToLabel(account.Role)}</span>
-          ${account.Name}
-        </button>
+        <div class="list-div"> 
+        <button type="button" class="list-copy-button" onclick="navigator.clipboard.writeText(${account.Id})"> &#x1f4cb; </button>
+          <button type="submit" class="list-button">
+            <span class="role">${this.accountRoleToLabel(account.Role)}</span>
+            ${account.Name}
+          </button>
+        </div>
       </form>`
     this.index[`${account.Id}_${account.Role}`] = btn
 
@@ -172,8 +174,8 @@ export class Switcher {
         <input type="hidden" name="csrf" value="${csrfField.value}">
         <input type="hidden" name="redirect_uri" value="${url}">
         <button type="submit" class="list-button">
-          <span class="back-icon"><span style="margin-left: -1px;">&#x25c0;</span></span>
-          <span>Back to main</span>
+          <span class="back-icon"><span style="margin-left: -1px;">&#x23CE;</span></span>
+          <span>Back to Enfo Auth</span>
         </button>
       </form>`
 
