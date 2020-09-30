@@ -5,7 +5,7 @@ const path = require('path')
 const METADATA = `// ==UserScript==
 // @name        AWSAccountSwitch
 // @namespace   https://enfo.se
-// @version     1.0.0
+// @version     1.0.1
 // @description GM/TM Script that allows you to easily switch between AWS accounts.
 // @author      Alexander Karlsson <alexander.karlsson@enfogroup.com>
 // @match       https://*.aws.amazon.com/*
