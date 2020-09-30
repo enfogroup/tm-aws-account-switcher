@@ -6,7 +6,6 @@ export default <string>`
   color: #ffffff;
   position: fixed;
   transition: all .2s ease-in-out;
-  z-index:999;
 }
 
 #aws-switch-account-button,
@@ -40,6 +39,7 @@ export default <string>`
 }
 
 #aws-switch-account-button {
+  z-index: 2147483647;
   left: 10px;
   bottom: 10px;
   height: 30px;
@@ -52,7 +52,6 @@ export default <string>`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
 #aws-switch-account-button > span {
@@ -75,6 +74,7 @@ export default <string>`
 
 #aws-switch-account-list {
   background-color: #fff;
+  z-index: 2147483646;
   left: 35px;
   bottom: 35px;
   opacity: 0;
